@@ -45,7 +45,7 @@ jobs:
           echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
       - name: Build APK
         run: |
-          gradle --no-daemon -p project assembleDebug
+          gradle --no-daemon -p "$PROJECT_DIR" assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
